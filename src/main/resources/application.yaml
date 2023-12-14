@@ -6,3 +6,9 @@ server:
   threads:
     max: 50
     min-spare: 10
+polar:
+  greeting: Welcome MR Mostafa
+
+#spring:
+#  profiles:
+#    active: '@testData@'
