@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 @WebMvcTest(BookController.class)
 class BookControllerMvcTests {
@@ -24,11 +25,12 @@ class BookControllerMvcTests {
 
     @Test
     void whenGetBookNotExistingThenShouldReturn404() throws Exception {
-        String isbn = "73737313940";
+        String isbn = "123456789";
         given(bookService.viewBookDetails(isbn)).willThrow(BookNotFoundException.class);
         mockMvc
                 .perform(get("/books/" + isbn))
                 .andExpect(status().isNotFound());
+
     }
 
 }
