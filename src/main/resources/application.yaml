@@ -9,6 +9,6 @@ server:
 polar:
   greeting: Welcome MR Mostafa
 
-#spring:
-#  profiles:
-#    active: '@testData@'
+spring:
+  profiles:
+    active: 'default'
