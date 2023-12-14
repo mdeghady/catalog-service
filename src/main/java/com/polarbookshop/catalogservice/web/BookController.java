@@ -18,7 +18,7 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public Iterable<Book> get(){
         return bookService.viewBookList();
     }
