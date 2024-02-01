@@ -38,7 +38,7 @@ public class BookController {
     }
 
     @PutMapping("{isbn}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.OK)
     public Book put(@PathVariable String isbn , @Valid @RequestBody Book book){
         return bookService.editBookDetails(isbn , book);
     }
