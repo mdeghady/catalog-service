@@ -1,5 +1,8 @@
 package com.polarbookshop.catalogservice.domain;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class BookService {
     private final BookRepository bookRepository;
 
@@ -7,7 +10,7 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public Iterable<Book> findAll() {
+    public Iterable<Book> viewBookList() {
         return bookRepository.findAll();
     }
 
