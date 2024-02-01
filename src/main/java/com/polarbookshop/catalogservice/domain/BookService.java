@@ -3,7 +3,7 @@ package com.polarbookshop.catalogservice.domain;
 public class BookService {
     private final BookRepository bookRepository;
 
-    public BookService (){
+    public BookService (BookRepository bookRepository){
         this.bookRepository = bookRepository;
     }
 
