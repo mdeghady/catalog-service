@@ -1,5 +1,8 @@
 node {    
-      def app   
+      def app
+      tools{
+            maven 'maven'
+      }
       stage("Build Maven"){
             withMaven{
                 sh 'mvn package -DskipTests'
